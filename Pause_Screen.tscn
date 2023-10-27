@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfan8nrskuxms"]
+
+[ext_resource type="Script" path="res://Pause_Screen.gd" id="1_ucwfl"]
+
+[node name="Pause_Screen" type="Node2D"]
+script = ExtResource("1_ucwfl")
+
+[node name="Save_Button" type="Button" parent="."]
+offset_left = 540.0
+offset_top = 197.0
+offset_right = 807.0
+offset_bottom = 264.0
+text = "Save"
+
+[node name="Resume_Button" type="Button" parent="."]
+offset_left = 543.0
+offset_top = 108.0
+offset_right = 810.0
+offset_bottom = 175.0
+text = "Resume"
+
+[node name="Quit_Button" type="Button" parent="."]
+offset_left = 537.0
+offset_top = 280.0
+offset_right = 804.0
+offset_bottom = 347.0
+tooltip_text = "Quit 
+"
+text = "Quit"
+
+[connection signal="pressed" from="Save_Button" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="Resume_Button" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="Quit_Button" to="." method="_on_quit_button_pressed"]
